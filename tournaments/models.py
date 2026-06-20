@@ -33,6 +33,8 @@ class Tournament(models.Model):
     current_round = models.PositiveIntegerField()
     #최종 우승 아이템 
     winner_item = models.ForeignKey(Item, null=True, blank=True, on_delete=models.SET_NULL)
+    #공유 링크 토큰 
+    share_token = models.CharField(max_length=100, unique=True, default=uuid.uuid4)
     
     #시작 시간
     started_at = models.DateTimeField(auto_now_add=True)
@@ -64,17 +66,3 @@ class TournamentMatch(models.Model):
     def __str__(self):
         return f"{self.tournament} / {self.round_no}강 / {self.match_no}번 매치"
     
-class TournamentShare(models.Model):
-    #공유할 토너먼트 
-    tournament = models.ForeignKey(Tournament, null=False, blank=False, on_delete=models.CASCADE)
-    #공유 링크를 만든 유저
-    create_user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
-    
-    #공유 - 지피티도움..
-    share_token = models.CharField(max_length=100, unique=True, default=uuid.uuid4)
-    
-    #생성 시간
-    created_at = models.DateTimeField(auto_now_add=True)
-    
-    def __str__(self):
-        return f"{self.create_user.username}의 공유 토너먼트"
