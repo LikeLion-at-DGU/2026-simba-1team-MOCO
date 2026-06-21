@@ -11,3 +11,22 @@ def cup_ing(request):
 
 def cup_result(request):
     return render(request, 'cup_result.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def main(request):
+    return render(request, 'main.html')
+
+def signup(request):
+    return render(request, 'signup.html')
+
+def agree(request):
+    return render(request, 'agree.html')
+
+def product(request):
+    return render(request, 'product.html')
+
+def plus(request):
+    return render(request, 'plus.html')
+
