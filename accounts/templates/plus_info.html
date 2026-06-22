@@ -6,58 +6,56 @@
 {% endblock %}
 
 {% block content %}
+<form method="POST" action="{% url 'items:create' %}" enctype="multipart/form-data">
+{% csrf_token %}
+
 <div class="frame_148">
     <div class="frame_143">
-        <div class="font_2">
-        카테고리
-        </div>
+        <div class="font_2">카테고리</div>
         <div class="frame_142">
-            <div class="frame_149">
-            <img src="{% static 'images/image25.png' %}" class="icon_1">
-             <div class="fashion">패션</div>  
-            </div>
-            <div class="pt">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-            <path d="M4.375 7.875L10.5 14L16.625 7.875" stroke="black" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            </div>
-    
+            <select name="category" class="frame_149">
+                {% for cat in categories %}
+                <option value="{{ cat.id }}">{{ cat.name }}</option>
+                {% endfor %}
+            </select>
         </div>
     </div>
+
     <div class="frame_147">
         <div class="frame_144">
-            <div class="font_2">
-                 아이템 이름
-            </div>
+            <div class="font_2">아이템 이름</div>
             <div class="frame_141">
-                 <div class="font_3">이름을 입력해주세요</div>
+                <input type="text" name="product_name" class="font_3" placeholder="이름을 입력해주세요" required>
             </div>
         </div>
-        <div class="empty">
 
-        </div>
+
         <div class="frame_144">
-            <div class="font_2">
-                 링크 첨부 (선택)
-            </div>
+            <div class="font_2">링크 첨부 (선택)</div>
             <div class="frame_141">
-                 <div class="font_3">링크를 입력해주세요</div>
+                <input type="text" name="product_url" class="font_3" placeholder="링크를 입력해주세요">
             </div>
         </div>
-        <div class="empty">
-            
-        </div>
+
         <div class="frame_144">
-            <div class="font_2">
-                 가격 (선택)
-            </div>
+            <div class="font_2">가격 (선택)</div>
             <div class="frame_141">
-                 <div class="font_3">가격을 입력해주세요</div>
+                <input type="number" name="price" class="font_3" placeholder="가격을 입력해주세요">
             </div>
         </div>
-        <div class="empty">
-            
+
+        <div class="frame_144">
+            <div class="font_2">이미지</div>
+            <div class="frame_141">
+                <input type="file" name="image" accept="image/*" required>
+            </div>
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block btn %}
+<button type="submit" class="btn">등록하기</button>
+</form>
 {% endblock %}
