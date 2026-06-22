@@ -12,12 +12,14 @@
 
     <div class="Frame64">
         <p class="head_text">몇 강으로, 어떤 카테고리로<br>대결할지 선택해요!</p>
+
         <div class="Frame63">
             <div class="Frame62">
                 <p class="category_text">어떤 카테고리로 진행할까요?</p>
+
                 <div class="Frame60">
                     {% for category in categories %}
-                        <button 
+                        <button
                             type="button"
                             class="category_btn"
                             data-category-id="{{ category.id }}">
@@ -27,15 +29,17 @@
                         <p>선택 가능한 카테고리가 없습니다.</p>
                     {% endfor %}
                 </div>
+
                 <input type="hidden" name="category" id="selected_category">
             </div>
 
             <div class="Frame57">
                 <p class="choice_text">몇 강으로 진행할까요?</p>
+
                 <div class="Frame55">
                     <div class="Frame54">
                         {% for value, label in size_choices %}
-                            <button 
+                            <button
                                 type="button"
                                 class="round_btn"
                                 data-size="{{ value }}">
@@ -56,9 +60,9 @@
     <img src="{% static 'tournaments/images/image6.png' %}" alt="" class="image6">
     <img src="{% static 'tournaments/images/image7.png' %}" alt="" class="image7">
     <img src="{% static 'tournaments/images/image8.png' %}" alt="" class="image8">
-    
+
     <button type="submit" class="start_btn">시작하기</button>
-</from>
+</form>
 
 <script src="{% static 'tournaments/js/cup_select.js' %}"></script>
 
