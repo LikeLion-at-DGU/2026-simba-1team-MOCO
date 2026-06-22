@@ -26,7 +26,7 @@ def cup_ing(request):
     return render(request, 'cup_ing.html', context)
 
 def cup_result(request):
-    context = {}
+  context = {}
     shared_tournament_id = request.session.get('shared_tournament_id')
     if shared_tournament_id:
         try:
@@ -37,6 +37,27 @@ def cup_result(request):
         except Tournament.DoesNotExist:
             pass
     return render(request, 'cup_result.html', context)
+
+def login(request):
+    return render(request, 'login.html')
+
+def main(request):
+    return render(request, 'main.html')
+
+def signup(request):
+    return render(request, 'signup.html')
+
+def agree(request):
+    return render(request, 'agree.html')
+
+def product(request):
+    return render(request, 'product.html')
+
+def plus(request):
+    return render(request, 'plus.html')
+
+def plus_info(request):
+    return render(request, 'plus_info.html')
 
 def cup_link(request):
     return render(request, 'cup_link.html')
