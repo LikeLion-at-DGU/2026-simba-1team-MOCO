@@ -115,7 +115,12 @@ def plus(request):
     return render(request, 'items/plus.html')
 
 def plus_info(request):
-    return render(request, 'items/plus_info.html')
+    if not request.user.is_authenticated:
+        return redirect('accounts:login')
+    
+    categories = Category.objects.filter(creator=request.user) | Category.objects.filter(is_default=True)
+
+    return render(request, 'items/plus_info.html', {'categories': categories})
 
 def product(request):
     return render(request, 'items/product.html')
