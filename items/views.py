@@ -42,7 +42,7 @@ def create(request):
         new_item.product_name = request.POST['product_name']
         new_item.image = request.FILES.get('image')
         new_item.product_url = request.POST.get('product_url')
-        new_item.price = request.POST.get('price')
+        price = request.POST.get('price')
         if price == '':
             price = None
         new_item.price = price
