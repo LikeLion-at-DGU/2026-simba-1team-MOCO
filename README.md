@@ -26,8 +26,9 @@
 | 정서현 | PM | - |
 | 이승원 | 프론트엔드 | [@feseungwon](https://github.com/feseungwon) |
 | 이현우 | 프론트엔드 | [@hyunaway](https://github.com/hyunaway) |
-| 황준호 | 백엔드 | [@junhnno](https://github.com/junhnno) |
 | 조수아 | 백엔드 | [@choosooa](https://github.com/choosooa) |
+| 황준호 | 백엔드 | [@junhnno](https://github.com/junhnno) |
+
 
 <br>
 
