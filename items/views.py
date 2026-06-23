@@ -48,9 +48,6 @@ def create(request):
         return redirect('items:storage')
     
     return redirect('items:plus')
-    #아이템 등록 페이지 처음 보여줄 때 사용/
-    #categories = Category.objects.filter(creator=request.user) | Category.objects.filter(is_default=True)
-    #return render(request, 'items/create.html', {'categories': categories})
 
 def detail(request, item_id):
     if not request.user.is_authenticated:
