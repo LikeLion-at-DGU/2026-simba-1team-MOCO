@@ -26,7 +26,8 @@ def cup_ing(request):
     return render(request, 'cup_ing.html', context)
 
 def cup_result(request):
-  context = {}
+    context = {}
+
     shared_tournament_id = request.session.get('shared_tournament_id')
     if shared_tournament_id:
         try:
@@ -36,10 +37,9 @@ def cup_result(request):
             context['sharer_winner'] = shared_tournament.winner_item
         except Tournament.DoesNotExist:
             pass
+
     return render(request, 'cup_result.html', context)
 
-def login(request):
-    return render(request, 'login.html')
 
 def main(request):
     return render(request, 'main.html')
@@ -47,8 +47,8 @@ def main(request):
 def signup(request):
     return render(request, 'signup.html')
 
-def agree(request):
-    return render(request, 'agree.html')
+def terms(request):
+    return render(request, 'terms.html')
 
 def product(request):
     return render(request, 'product.html')
