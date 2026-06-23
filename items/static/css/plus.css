@@ -43,10 +43,12 @@ align-self: stretch;
 .frame_127{
     display: flex;
 align-items: center;
-align-content: center;
+align-content:flex-start;
 gap: 19px;
 align-self: stretch;
 flex-wrap: wrap;
+height: 260px;
+overflow-y: auto;
 }
 
 .category{
@@ -103,4 +105,20 @@ background: #F2F2F2;
 color: #A4A8AB;
 font-size: 28px;
 font-weight: 400;
+}
+
+.category:hover{
+border-radius: 20px;
+background: #F9F9F9;
+box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.17);
+}
+
+.category.selected {
+  border-radius: 20px;
+background: #FFF;
+box-shadow: 0 4px 20px 0 rgba(150, 241, 255, 0.80), 0 4px 15px 0 rgba(0, 0, 0, 0.17);
+}
+
+a {
+  text-decoration-line: none;
 }
