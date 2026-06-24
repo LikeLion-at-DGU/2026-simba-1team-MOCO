@@ -22,7 +22,7 @@
 
 ## 👥 Team MOCO
 | 이름 | 역할 | GitHub | 구현 |
-|---|---|---|
+|---|---|---|---| 
 | 정서현 | PM | [@hp4323000](https://github.com/hp4323000) | @ |
 | 이승원 | FE | [@feseungwon](https://github.com/feseungwon) | @ |
 | 이현우 | FE | [@hyunaway](https://github.com/hyunaway) | @ |
