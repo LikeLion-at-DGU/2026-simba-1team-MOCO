@@ -27,7 +27,7 @@
 | 이승원 | FE | [@feseungwon](https://github.com/feseungwon) | @ |
 | 이현우 | FE | [@hyunaway](https://github.com/hyunaway) | @ |
 | 조수아 | BE | [@choosooa](https://github.com/choosooa) | ERD 설계, items + tournaments MODEL 구현, tournaments VIEW 구현 |
-| 황준호 | BE | [@junhnno](https://github.com/junhnno) | URL 명세서 설계, accounts + categorys MODEL 구현 accounts + categorys + items VIEW 구현 |
+| 황준호 | BE | [@junhnno](https://github.com/junhnno) | URL 명세서 설계, accounts + categorys MODEL 구현, accounts + categorys + items VIEW 구현 |
 
 
 <br>
