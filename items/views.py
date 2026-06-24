@@ -41,7 +41,7 @@ def create(request):
     
         new_item = Item()
         new_item.owner_user = request.user
-        new_item.category = get_object_or_404(Category, pk=request.POST['category'])
+        new_item.category = get_object_or_404(Category, pk=category_id) 
         new_item.product_name = request.POST['product_name']
         new_item.image = request.FILES.get('image')
         new_item.product_url = request.POST.get('product_url')
